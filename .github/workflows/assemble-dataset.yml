@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.dataset_parts/part06'
+      - '.github/workflows/assemble-dataset.yml'
 
 permissions:
   contents: write
