@@ -1,0 +1,89 @@
+/* Evaluation-only presentation for the supplied experimental figures. */
+.evaluation-page .evaluation-section {
+  margin-top: 32px;
+  padding-block: 34px 64px;
+  background: #fff;
+  border: 0;
+}
+
+.evaluation-page .evaluation-heading p {
+  margin-top: 24px;
+  color: #364963;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.evaluation-page .evaluation-heading a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.evaluation-page .result-figure {
+  margin-top: 38px;
+}
+
+.evaluation-page .terrain-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.evaluation-page .terrain-scroll:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.evaluation-page .terrain-grid {
+  display: grid;
+  min-width: 640px;
+  grid-template-columns: minmax(0, 238fr) minmax(0, 238fr) minmax(0, 238fr) minmax(0, 274fr);
+  gap: 12px;
+  align-items: end;
+}
+
+.evaluation-page .terrain-panel a,
+.evaluation-page .score-result > a,
+.evaluation-page .relative-result > a {
+  display: block;
+}
+
+.evaluation-page .result-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.evaluation-page .panel-label {
+  margin-top: 12px;
+  text-align: center;
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.evaluation-page .result-figure figcaption {
+  margin-top: 22px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  font-size: .875rem;
+  line-height: 1.7;
+}
+
+.evaluation-page .score-result {
+  width: 100%;
+  margin: 56px auto 0;
+}
+
+.evaluation-page .score-result > a {
+  width: 50%;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.evaluation-page .relative-result {
+  width: 100%;
+  margin: 56px auto 0;
+}
+
+.evaluation-page .relative-result > a {
+  width: 93%;
+  margin-inline: auto;
+}

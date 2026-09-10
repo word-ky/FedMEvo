@@ -1,0 +1,48 @@
+/* Homepage author details; other pages retain their approved styles. */
+.home-page .authors sup,
+.home-page .institution-list sup {
+  color: var(--blue);
+  font-size: .7em;
+}
+
+.home-page .authors sup {
+  margin-left: .15em;
+}
+
+.home-page .authors a,
+.home-page .author-email a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-page .affiliations {
+  max-width: 940px;
+  margin-top: 18px;
+  color: #465b75;
+  font-size: .875rem;
+  line-height: 1.7;
+}
+
+.home-page .detail-label {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.home-page .institution-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-page .author-email {
+  margin-top: 20px;
+  font-size: .875rem;
+  line-height: 1.7;
+}

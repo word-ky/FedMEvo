@@ -1,0 +1,42 @@
+/* Method-only typography; other pages keep their approved presentation. */
+.method-page .method-heading {
+  margin-bottom: 32px;
+}
+
+.method-page .method-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.method-page .method-copy {
+  margin-top: 32px;
+  color: #364963;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.method-page .method-copy p + p {
+  margin-top: 22px;
+}
+
+.method-page .method-copy a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.method-page .contributions {
+  margin: 16px 0 0;
+  padding-left: 1.4em;
+}
+
+.method-page .contributions li {
+  padding-left: .3em;
+}
+
+.method-page .contributions li + li {
+  margin-top: 18px;
+}
+
+.method-page .contributions li::marker {
+  color: var(--blue);
+}

@@ -1,0 +1,82 @@
+/* Abstract-only layout; the approved homepage keeps its existing styles. */
+.abstract-page .abstract-section {
+  display: block;
+}
+
+.abstract-page .abstract-heading {
+  margin-bottom: 32px;
+}
+
+.abstract-page .research-part h2 {
+  margin-bottom: 18px;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.abstract-page .abstract-part {
+  margin-top: 38px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.abstract-page .background-copy {
+  color: #364963;
+  font-size: .9375rem;
+  line-height: 1.85;
+}
+
+.abstract-page .background-copy p + p {
+  margin-top: 20px;
+}
+
+.abstract-page .paper-reference {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.abstract-page .intro-figure {
+  width: 100%;
+  max-width: none;
+  margin: 30px auto 0;
+}
+
+.abstract-page .intro-figure > a {
+  width: 70%;
+  margin-inline: auto;
+  padding: 10px 0;
+}
+
+.abstract-page .intro-figure figcaption {
+  padding: 14px 18px;
+  font-size: .8125rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.abstract-page .abstract-copy {
+  font-size: .9375rem;
+  line-height: 1.85;
+}
+
+.abstract-page .abstract-copy strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+.abstract-page .term-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.abstract-page .term-link:hover {
+  color: var(--ink);
+}
+
+.abstract-page .abstract-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}

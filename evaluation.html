@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FedMEvo jointly optimizes agentic memory evolution and wireless communication for collaboration among frozen-LLM agents.">
+  <meta name="theme-color" content="#12274b">
+  <title>Evaluation · FedMEvo</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="evaluation.css?v=6">
+</head>
+<body class="detail-page evaluation-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="FedMEvo home">FedM<span>Evo</span><span class="wordmark-period">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="abstract.html">Background &amp; Abstract</a>
+        <a href="method.html">Method</a>
+        <a href="evaluation.html" aria-current="page">Evaluation</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-paper" href="assets/FedMEvo.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="breadcrumb container"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Evaluation</span></div>
+    <section class="evaluation-section" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="container">
+        <div class="evaluation-heading">
+          <h1 id="evaluation-title">Evaluation</h1>
+          <p>Extensive experiments demonstrate the superior task performance and communication efficiency of <strong>FedMEvo</strong>. We present three representative experimental results below. For the complete experimental roadmap and detailed experiments, see <a href="assets/FedMEvo.pdf#page=7" target="_blank" rel="noopener">Table II</a> and <a href="assets/FedMEvo.pdf#page=7" target="_blank" rel="noopener">Sec. V (Experiments &amp; Analysis)</a> of the paper.</p>
+        </div>
+        <figure class="result-figure communication-result" aria-labelledby="communication-caption">
+          <div class="terrain-scroll" tabindex="0" role="region" aria-label="Communication comparison: four panels in one row">
+          <div class="terrain-grid">
+            <div class="terrain-panel">
+              <a href="assets/wcns_comm_terrain.pdf" target="_blank" rel="noopener" aria-label="Open original WCNS communication figure PDF"><img src="assets/wcns_comm_terrain.svg" width="317404" height="311391" alt="WCNS: uplink, downlink, control and total communication for external baselines and FedMEvo."></a>
+              <p class="panel-label">(a) WCNS</p>
+            </div>
+            <div class="terrain-panel">
+              <a href="assets/wcmsa_comm_terrain.pdf" target="_blank" rel="noopener" aria-label="Open original WCMSA communication figure PDF"><img src="assets/wcmsa_comm_terrain.svg" width="320378" height="311391" alt="WCMSA: uplink, downlink, control and total communication for external baselines and FedMEvo."></a>
+              <p class="panel-label">(b) WCMSA</p>
+            </div>
+            <div class="terrain-panel">
+              <a href="assets/wchw_comm_terrain.pdf" target="_blank" rel="noopener" aria-label="Open original WCHW communication figure PDF"><img src="assets/wchw_comm_terrain.svg" width="320680" height="311391" alt="WCHW: uplink, downlink, control and total communication for external baselines and FedMEvo."></a>
+              <p class="panel-label">(c) WCHW</p>
+            </div>
+            <div class="terrain-panel">
+              <a href="assets/oranbench_comm_terrain.pdf" target="_blank" rel="noopener" aria-label="Open original ORANBench communication figure PDF"><img src="assets/oranbench_comm_terrain.svg" width="364145" height="311391" alt="ORANBench: uplink, downlink, control and total communication for external baselines and FedMEvo, with color scale in KB."></a>
+              <p class="panel-label">(d) ORANBench</p>
+            </div>
+          </div>
+          </div>
+          <figcaption id="communication-caption">Communication-specific comparison across external baselines and <strong>FedMEvo</strong>. Markers report exact uplink, recipient-charged downlink, control, and total communication in KB. The lowest communication cost is highlighted in bold, and the second-best result is underlined.</figcaption>
+        </figure>
+        <figure class="result-figure score-result" aria-labelledby="score-caption">
+          <a href="assets/main_score_comm.pdf" target="_blank" rel="noopener" aria-label="Open original performance–communication figure PDF"><img src="assets/main_score_comm.svg" width="241472" height="128476" alt="Original performance–communication scatter plots labeled WCNS and WCMSA, comparing FedMEvo with external baselines." loading="lazy"></a>
+          <figcaption id="score-caption">Performance–communication robustness of <strong>FedMEvo</strong> across different datasets. The upper-left direction indicates higher task performance and lower communication cost.</figcaption>
+        </figure>
+        <figure class="result-figure relative-result" aria-labelledby="relative-caption">
+          <a href="assets/relative_score_comm.pdf?v=20260910-2056" target="_blank" rel="noopener" aria-label="Open original comparison with low-communication baselines PDF"><img src="assets/relative_score_comm.svg?v=20260910-2056" width="323428" height="66357" alt="Task score and communication comparison against selected low-communication baselines on WCNS, WCMSA, WCHW, ORANBench and 3GPP-TSG, with relative-change arrows." loading="lazy"></a>
+          <figcaption id="relative-caption">Comparison between <strong>FedMEvo</strong> and selected low-communication baselines. Hatched and solid bars denote the baselines and <strong>FedMEvo</strong>, respectively; curved arrows indicate relative changes, with negative communication values denoting traffic reduction.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="index.html">FedM<span>Evo</span><span class="wordmark-period">.</span></a><p>Agentic memory evolution over wireless networks.</p><a href="index.html">Back to home <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

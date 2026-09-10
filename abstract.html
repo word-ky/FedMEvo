@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FedMEvo jointly optimizes agentic memory evolution and wireless communication for collaboration among frozen-LLM agents.">
+  <meta name="theme-color" content="#12274b">
+  <title>Background &amp; Abstract · FedMEvo</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="abstract.css?v=4">
+</head>
+<body class="detail-page abstract-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="FedMEvo home">FedM<span>Evo</span><span class="wordmark-period">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="abstract.html" aria-current="page">Background &amp; Abstract</a>
+        <a href="method.html">Method</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-paper" href="assets/FedMEvo.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="breadcrumb container"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Background &amp; Abstract</span></div>
+    <section class="abstract-section container" id="abstract" aria-labelledby="abstract-title">
+      <div class="abstract-heading"><p class="eyebrow">The research</p><h1 id="abstract-title">Background &amp; Abstract</h1></div>
+      <section class="research-part background-part" aria-labelledby="background-title">
+        <h2 id="background-title">Background</h2>
+        <div class="background-copy">
+          <p>With the emergence of large language models (LLMs), LLM-based intelligent agents are increasingly employed for perception, reasoning, and decision-making tasks. However, a single agent remains limited when continuously encountering diverse tasks and local observations. Federated Agent Collaboration provides a distributed cooperation paradigm in which multiple agents exchange learned knowledge to improve local task performance (see <a class="paper-reference" href="#collaboration-figure">Fig. 1</a>). However, such collaboration inevitably incurs communication overhead. In real-world wireless environments with limited shared communication resources, this further calls for exchanging lightweight semantic knowledge to reduce communication burden while retaining collaborative benefits.</p>
+        </div>
+      <figure class="intro-figure" id="collaboration-figure">
+        <a href="assets/intro-final.png" target="_blank" rel="noopener" aria-label="Open the original federated agent collaboration illustration">
+          <img src="assets/intro-final.png" width="1540" height="836" alt="Conceptual illustration of research, software, analysis, scientific, industrial, maintenance, content, and enterprise agents exchanging local memories through a cloud-side shared memory pool." fetchpriority="high">
+        </a>
+        <figcaption>Fig. 1. Federated agent collaboration, where heterogeneous agents exchange locally acquired knowledge through a cloud-coordinated memory pool to improve local task performance. The illustrated providers include OpenAI, Anthropic, Google, DeepSeek, MiniMax, Qwen, Z.ai, and Xiaomi.</figcaption>
+      </figure>
+      </section>
+      <section class="research-part abstract-part" aria-labelledby="abstract-content-title">
+        <h2 id="abstract-content-title">Abstract</h2>
+      <div class="abstract-copy">
+        <p>In the LLM era, <a class="term-link" href="https://proceedings.mlr.press/v267/wang25db.html" target="_blank" rel="noopener" title="Related reading: Federated In-Context Learning (ICML 2025)"><strong><em>federated agent collaboration</em></strong></a> enables distributed agents to exchange valuable knowledge and improve local task performance. We extend <a class="term-link" href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/19909c36f51abc4856b4560aff3d36d6-Abstract-Conference.html" target="_blank" rel="noopener" title="Related reading: A-Mem: Agentic Memory for LLM Agents (NeurIPS 2025)"><strong><em>Agentic Memory Evolution (AME)</em></strong></a> to the federated collaboration framework, giving rise to the <strong><em>federated AME</em></strong> paradigm. However, this direct extension remains insufficiently adapted, with limitations including: <em>(1) memory exchange lacks explicit adaptation to practical wireless resource constraints; (2) the applicability of local memory to other agents' tasks is insufficiently considered; and (3) the semantic quality of exchanged memories is insufficiently considered.</em></p>
+        <p>To address these issues, we propose a <em>joint agentic memory evolution and communication optimization framework</em>, namely <strong>FedMEvo</strong>, for communication-resource-constrained wireless scenarios. Specifically, we first <span class="abstract-underline">formulate <strong><em>federated AME</em></strong> under explicit wireless communication constraints</span>. We then <span class="abstract-underline">develop a task-aware co-optimization mechanism</span> for on-demand agentic-memory exchange and wireless resource allocation. Moreover, <span class="abstract-underline">we propose a multi-granularity memory representation strategy</span> for the co-optimization, enabling joint consideration of semantic information and communication payload across varying representation sizes. Importantly, <em>we provide a rigorous theoretical characterization of the proposed co-optimization</em>, establishing its solution structure and convergence properties.</p>
+        <p><strong><em>Extensive experiments</em></strong> show that FedMEvo achieves <span class="abstract-underline">40.8% higher average task performance</span> than the strongest external baseline and <span class="abstract-underline">82.5% lower communication</span> than the full-memory-upload variant. <strong><em>Further evaluations</em></strong> demonstrate robust performance–communication efficiency across diverse experimental settings. We further validate <strong><em>its practical applicability in a real-world industrial IoT scenario</em></strong>.</p>
+      </div>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="index.html">FedM<span>Evo</span><span class="wordmark-period">.</span></a><p>Agentic memory evolution over wireless networks.</p><a href="index.html">Back to home <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
