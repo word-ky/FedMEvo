@@ -3,7 +3,7 @@ name: Assemble dataset
 on:
   push:
     paths:
-      - '.dataset_parts/part24'
+      - '.dataset_parts/part03'
 
 permissions:
   contents: write
@@ -17,8 +17,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -f .dataset_parts/part24
-          cat .dataset_parts/part* | base64 --decode > industrial/data/coalmine_methane.json
+          test -f .dataset_parts/part03
+          cat .dataset_parts/part* | base64 --decode > /tmp/coalmine_methane.json.gz
+          gunzip -c /tmp/coalmine_methane.json.gz > industrial/data/coalmine_methane.json
           echo "046880f01973da1d3fecefc8876e372613897c298991454d70b148380f4c616c  industrial/data/coalmine_methane.json" | sha256sum -c -
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
