@@ -36,15 +36,45 @@ The original sensor source contains 9,199,930 one-second records. Construction,
 validation, and test splits each contain equal numbers of Normal and Warning
 samples.
 
+## Experimental configuration
+
+The complete configuration used for the federated agentic methane-risk
+identification experiments is summarized below.
+
+| Setting | Configuration |
+| --- | --- |
+| **System Deployment** | |
+| Central host | CPU-based orchestration; 2 × Intel Xeon Platinum 8358P @ 2.60 GHz; 64 physical cores / 128 threads |
+| Edge-node platform | GPU-based local inference; 2 × NVIDIA RTX A6000, 48 GB/GPU |
+| Number of clients | 5 logical clients |
+| Default communication rounds | 2 rounds |
+| Default edge-node model | Qwen2.5-VL-7B-Instruct, frozen text-only inference |
+| Heterogeneous model assignment | Clients 0 and 1: Qwen2.5-VL-7B; clients 2 and 3: Qwen3-8B; client 4: Llama-3.1-8B-Instruct |
+| Inference mode | Locally loaded frozen models; text-only input; deterministic generation without sampling |
+| Model precision | BF16 |
+| Inference concurrency | One inference request per backend at a time |
+| Qwen3 inference mode | Thinking disabled; non-thinking mode |
+| **Communication Configuration** | |
+| Shared uplink bandwidth | 500 Hz |
+| Client spectral efficiencies | 1.8 / 1.2 / 0.5 / 0.9 / 1.5 bit/s/Hz for clients 0–4, respectively |
+| Network model | Reliable transmission with zero packet loss |
+| Communication accounting | Uplink, recipient-charged downlink, control, and total bytes |
+| **Data Configuration** | |
+| Source stream | 9,199,930 one-second underground-mine multisensor records |
+| Observation / horizon / lead | 60 s / 180 s / 180 s |
+| Risk criterion | Methane concentration ≥ 1.0% across monitored sensors |
+| Task type | Binary methane-risk identification: Normal vs. Warning |
+| Data split | 60 construction / 40 validation / 150 test |
+| Class distribution | Construction: 30 Normal / 30 Warning; validation: 20 Normal / 20 Warning; test: 75 Normal / 75 Warning |
+| Input features | Textual summaries of methane concentration, ventilation and airflow, temperature and humidity, pressure, and shearer operating status |
+| **Evaluation** | |
+| Evaluation metrics | Accuracy; Warning-class recall and Normal-class specificity are additionally reported |
+
 ## Run from the repository root
 
 ```bash
 python -m industrial.run_coalmine --backend demo
 ```
-
-Default wireless parameters are
-500 Hz total bandwidth, latency weight 0.005, demand weight 0.4, and deterministic
-example spectral efficiencies 2/3/4/5/6 bits/s/Hz.
 
 API-hosted model (set `FEDMEVO_API_KEY` first):
 
