@@ -1,0 +1,29 @@
+name: Assemble dataset
+
+on:
+  push:
+    paths:
+      - '.dataset_parts/part10'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble exact uploaded dataset
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .dataset_parts/part10
+          cat .dataset_parts/part* | base64 --decode > industrial/data/coalmine_methane.json
+          echo "046880f01973da1d3fecefc8876e372613897c298991454d70b148380f4c616c  industrial/data/coalmine_methane.json" | sha256sum -c -
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add industrial/data/coalmine_methane.json
+          git rm -r .dataset_parts
+          git rm .github/workflows/assemble-dataset.yml
+          git commit -m "Add CoalMine methane dataset"
+          git push
