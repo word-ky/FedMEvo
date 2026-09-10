@@ -47,7 +47,6 @@ identification experiments is summarized below.
 | Central host | CPU-based orchestration; 2 × Intel Xeon Platinum 8358P @ 2.60 GHz; 64 physical cores / 128 threads |
 | Edge-node platform | GPU-based local inference; 2 × NVIDIA RTX A6000, 48 GB/GPU |
 | Number of clients | 5 logical clients |
-| Default communication rounds | 2 rounds |
 | Default edge-node model | Qwen2.5-VL-7B-Instruct, frozen text-only inference |
 | Heterogeneous model assignment | Clients 0 and 1: Qwen2.5-VL-7B; clients 2 and 3: Qwen3-8B; client 4: Llama-3.1-8B-Instruct |
 | Inference mode | Locally loaded frozen models; text-only input; deterministic generation without sampling |
@@ -56,12 +55,10 @@ identification experiments is summarized below.
 | Qwen3 inference mode | Thinking disabled; non-thinking mode |
 | **Communication Configuration** | |
 | Shared uplink bandwidth | 500 Hz |
-| Client spectral efficiencies | 1.8 / 1.2 / 0.5 / 0.9 / 1.5 bit/s/Hz for clients 0–4, respectively |
 | Network model | Reliable transmission with zero packet loss |
 | Communication accounting | Uplink, recipient-charged downlink, control, and total bytes |
 | **Data Configuration** | |
 | Source stream | 9,199,930 one-second underground-mine multisensor records |
-| Observation / horizon / lead | 60 s / 180 s / 180 s |
 | Risk criterion | Methane concentration ≥ 1.0% across monitored sensors |
 | Task type | Binary methane-risk identification: Normal vs. Warning |
 | Data split | 60 construction / 40 validation / 150 test |
