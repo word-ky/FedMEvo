@@ -18,6 +18,7 @@ jobs:
         run: |
           set -euo pipefail
           test -f .dataset_parts/part06
+          mkdir -p industrial/data
           cat .dataset_parts/part* | base64 --decode > /tmp/coalmine_methane.json.gz
           gunzip -c /tmp/coalmine_methane.json.gz > industrial/data/coalmine_methane.json
           echo "046880f01973da1d3fecefc8876e372613897c298991454d70b148380f4c616c  industrial/data/coalmine_methane.json" | sha256sum -c -
