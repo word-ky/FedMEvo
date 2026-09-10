@@ -135,15 +135,6 @@ Our task observations summarize methane
 concentrations, ventilation and airflow, temperature, humidity, pressure, and
 shearer operating conditions.
 
-The published task file contains **250 main samples**, balanced between Normal
-and Warning within each split:
-
-| Split | Samples | Purpose |
-| --- | ---: | --- |
-| Construction | 60 | Local memory construction and replay |
-| Validation | 40 | Validation of task predictions |
-| Test | 150 | Evaluation of task predictions |
-
 Download the [single-file dataset](industrial/data/coalmine_methane.json).
 Each record includes its task ID, client assignment, timestamp, semantic tag,
 observation-based question, answer choices, and label. Construction records also
